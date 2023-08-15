@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fasthand&family=Hanken+Grotesk:ital,wght@0,100;0,300;0,600;0,700;1,400&family=Montserrat:wght@300;400&family=Nunito:wght@300&family=PT+Sans&family=Poppins:wght@300;400&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&family=Rubik:wght@300;400;600;700&family=Ysabeau+Infant:wght@300;400;500;600;700&family=Ysabeau+SC:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated {
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.section {
+  margin: 3rem 0;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  background: #dcdada;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.skill {
+  min-width: 200px;
+}
+
+.skill:hover .bord {
+  width: 90px;
+  background: rgb(15, 177, 15);
+}
+
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.item span, .CardLink {
+  color: #74767e;
+  position: relative;
+  cursor: pointer;
+  width: max-content;
+}
+
+.item span:before, .CardLink:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #74767e;
+  opacity: 0;
+
+}
+
+.item span:hover:before,
+.CardLink:hover:before {
+  opacity: 1;
+}
+
+.animated-half {
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.hovered-arrows .carousel-prev,
+.hovered-arrows .carousel-next {
+  position: absolute;
+  background: #dcdada;
+  color: #333;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  
+}
+.hovered-arrows:hover .carousel-prev,
+.hovered-arrows:hover .carousel-next {
+
+  opacity: 1;
+  
+}
+
+.link:before, .hovered-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #646363;
+  opacity: 0;
+
+}
+.link:hover:before {
+  opacity: 1;
+
+}
+
+
+.zxc:hover .hovered-link {
+  text-decoration: underline;
+  text-decoration-color: #333;
+}
+
+
+
+.unhover:hover .hovered-link {
+  text-decoration: none;
+}
+
+.myAbsoluteDiv {
+  pointer-events: none;
+}
+
+.dont-wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* .review .carousel-prev,
+.review .carousel-newx{
+
+
+} */
+
+.odd li:nth-of-type(odd) {
+  font-weight: bold;
+}
+
+.tableAI tr:nth-last-of-type(odd) td {
+  background: rgba(0 0 0 / .1);
+}
+
+.meltBLOCK{
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.meltBLOCK.melt {
+  opacity: 0;
+}
+
+.meltBLOCK.here {
+  opacity: 1;
+}
+
+.shadowedText {
+  text-shadow: 0 -1px 2px rgba(0,0,0,.3);
+}
